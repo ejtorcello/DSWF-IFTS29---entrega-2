@@ -1,0 +1,69 @@
+/* Estilos para el contenedor principal */
+.main {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 2px solid #4CAF50;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+}
+
+/* Estilos para la lista de datos */
+.datos-p {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Estilos para cada ítem de la lista */
+.datospp {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Estilos para el título */
+.datospp:first-child {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px 5px 0 0;
+}
+
+/* Estilos para el último ítem (sin borde inferior) */
+.datospp:last-child {
+    border-bottom: none;
+}
+.btn-volver {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff; /* Color de fondo azul */
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-volver:hover {
+    background-color: #0056b3; /* Color de fondo más oscuro al pasar el cursor */
+}
+
+/* Estilos para los textos en negrita */
+.font-weight-bold {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e0f7fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
