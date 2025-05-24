@@ -1,0 +1,51 @@
+Etiquetas <a> sin cerrar correctamente
+
+Ejemplo incorrecto:
+
+html
+Copiar
+Editar
+<li class="datospp"><a href="datos.html">MIS DATOS<a></li>
+Esto generaba nodos “fantasma” o malinterpretaciones del DOM que producían un espacio adicional con fondo marrón después del <footer>.
+
+Uso incorrecto de barras invertidas en rutas (\)
+
+HTML estándar requiere barras normales /.
+
+Ejemplo incorrecto:
+
+html
+Copiar
+Editar
+<img class=icono src="imagenes\pythonIcon.png">
+Esto puede provocar que las imágenes no se carguen correctamente.
+
+🔁 Cambios realizados
+Corrección de las etiquetas <a>
+
+Antes:
+
+html
+Copiar
+Editar
+<li class="datospp"><a href="datos.html">MIS DATOS<a></li>
+Después:
+
+html
+Copiar
+Editar
+<li class="datospp"><a href="datos.html">MIS DATOS</a></li>
+Corrección de rutas de imágenes
+
+Antes:
+
+html
+Copiar
+Editar
+<img class=icono src="imagenes\pythonIcon.png">
+Después:
+
+html
+Copiar
+Editar
+<img class="icono" src="imagenes/pythonIcon.png">

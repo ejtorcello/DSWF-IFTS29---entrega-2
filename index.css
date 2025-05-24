@@ -21,7 +21,7 @@ background-color: rgb(147, 64, 13);
 box-shadow: -1px 1px 7px 0px rgb(47, 47, 144) ;
 border-radius: 11px;
 padding: 10px;
-text-align: 10px; 
+text-align: centered; 
 
 }
 
@@ -48,7 +48,19 @@ grid-template-areas:
 .sidebar{grid-area: sidebar;background-color: beige;}  
                
 .footer{grid-area: footer;
-    background-color:rgb(167, 188, 63)}   
+    background-color:rgb(167, 188, 63)}  
+    .footer {
+    /**********************************************************************************************/
+    grid-area: footer;
+    background-color: rgb(167, 188, 63);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+    flex-wrap: wrap;
+    border-radius: 11px;
+}    
 @media (min-width: 600px)  {
     .main{background-image: url(imagenes/escritoriooscuro.png); background-size: 100%; opacity: .7; color:white}
     .grid-container{
@@ -63,7 +75,9 @@ grid-template-areas:
     }
     .main{
         background-color:rgb(240, 240, 240)}
-}       
+}  
+
+  
 
 @media (min-width: 900px)  {
     .grid-container{
