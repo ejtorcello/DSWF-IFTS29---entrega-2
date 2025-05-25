@@ -49,3 +49,13 @@ html
 Copiar
 Editar
 <img class="icono" src="imagenes/pythonIcon.png">
+
+Se desarrolló una galería de imágenes para representar distintos pasatiempos (como pesca, etc.). Para evitar el uso de código del lado del servidor y facilitar la gestión de contenidos, se optó por una solución basada exclusivamente en JavaScript del lado del cliente.
+
+La lógica implementada recorre secuencialmente los posibles nombres de archivos (por ejemplo, 1.jpg, 2.jpg, ...) dentro de carpetas predefinidas según el pasatiempo, hasta que una imagen no es encontrada. De esta forma, se simula la detección automática de imágenes sin requerir un listado de archivos desde el servidor.
+
+Cada pasatiempo tiene su propia carpeta de imágenes dentro de pasatiemposImagenes/<nombre_pasatiempo>/. El orden y la numeración de los archivos deben ser gestionados por el desarrollador para garantizar una carga fluida.
+
+Se incluye navegación con botones para avanzar o retroceder entre imágenes dentro de cada pasatiempo.
+
+se creo el "contactenos"
