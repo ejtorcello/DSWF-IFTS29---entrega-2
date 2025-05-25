@@ -36,14 +36,34 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    mostrarResultado("Formulario enviado correctamente (simulado).", "green");
+    mostrarResultado("Formulario enviado correctamente.", "green");
     formulario.reset();
   });
 
-  function mostrarResultado(mensaje, color) {
-    resultado.textContent = mensaje;
-    resultado.style.color = color;
-  }
+  function mostrarResultado(mensaje, tipo) {
+  const popup = document.getElementById("popup");
+  const popupMensaje = document.getElementById("popup-mensaje");
+  const popupCerrar = document.getElementById("popup-cerrar");
+
+  // Asigna el mensaje y la clase según el tipo
+  popupMensaje.textContent = mensaje;
+  popupMensaje.className = tipo === "green" ? "popup-exito" : "popup-error";
+
+  // Muestra el popup
+  popup.classList.remove("oculto");
+
+  // Cierra el popup al hacer clic en la 'X'
+  popupCerrar.onclick = () => {
+    popup.classList.add("oculto");
+  };
+
+  // Cierra el popup al hacer clic fuera del contenido
+  window.onclick = (event) => {
+    if (event.target === popup) {
+      popup.classList.add("oculto");
+    }
+  };
+}
 
   function validarNombreApellido(texto) {
     return /^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$/.test(texto);

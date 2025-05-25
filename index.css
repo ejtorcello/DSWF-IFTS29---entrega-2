@@ -1,104 +1,151 @@
 * {
-box-sizing: border-box;
-margin: 0;
-padding:0
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
- 
+
+#visitas {
+  text-align: left;
+  margin-left: 0;
+
+}
+
 .h3 {
-    display: inline-block; /* Hace que el elemento <h3> se comporte como un elemento en línea */
-    margin: 0; /* Elimina el margen predeterminado */
-    vertical-align: middle; /* Alinea verticalmente el texto con la imagen */
-}
-html {height:100% }
-body {font-family: "Public Sans", sans-serif;
-font-size: 1.2rem;
-min-height: 100%;
+  display: inline-block; /* Hace que <h3> se comporte como un elemento en línea */
+  margin: 0; 
+  vertical-align: middle; 
 }
 
-.grid-container> *{
-background-color: rgb(147, 64, 13); 
-  
-box-shadow: -1px 1px 7px 0px rgb(47, 47, 144) ;
-border-radius: 11px;
-padding: 10px;
-text-align: centered; 
-
+html {
+  height: 100%;
 }
 
-.grid-container{display: grid; gap: 10px;
-grid-template-areas: 
-
-"header" 
-"bio"
-"main"
-
-"sidebar"
-
-"footer"
-
+body {
+  font-family: "Public Sans", sans-serif;
+  font-size: 1.2rem;
+  min-height: 100%;
 }
 
-/*.header{grid-area: header; background-image: url(imagenes/papelocre.png); color:rgb(241, 241, 240);font-size: 2rem; text-align: center;}*/
-.header{grid-area: header; background-image: url(imagenes/barritas.png) ;background-size:100% ;color:rgb(245, 245, 240);font-size: 2rem; text-align: center;}
-.bio{grid-area: bio;
-    background-color:rgb(243, 237, 237)}
-.main{grid-area: main; background-image: url(imagenes/malla.png); background-size: 100%; color:white } 
-   
-   /* background-color:rgb(255, 255, 255)*/
-.sidebar{grid-area: sidebar;background-color: beige;}  
-               
-.footer{grid-area: footer;
-    background-color:rgb(167, 188, 63)}  
-    .footer {
-    /**********************************************************************************************/
-    grid-area: footer;
-    background-color: rgb(167, 188, 63);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    padding: 10px;
-    flex-wrap: wrap;
-    border-radius: 11px;
-}    
-@media (min-width: 600px)  {
-    .main{background-image: url(imagenes/escritoriooscuro.png); background-size: 100%; opacity: .7; color:white}
-    .grid-container{
+.grid-container > * {
+  background-color: rgb(147, 64, 13);
+  box-shadow: -1px 1px 7px 0px rgb(154, 201, 200);
+  border-radius: 11px;
+  padding: 10px;
+  text-align: left; 
+}
 
-        grid-template:
+.grid-container {
+  display: grid;
+  gap: 10px;
+  grid-template-areas:
+    "header"
+    "bio"
+    "main"
+    "sidebar"
+    "footer";
+}
 
-        "header header" 100px
-        "bio bio" auto
-        "sidebar main"  auto
-        "footer  footer" 100px/
-        200px auto
-    }
-    .main{
-        background-color:rgb(240, 240, 240)}
-}  
 
-  
+.header {
+  grid-area: header;
+  background-image: url(imagenes/barritas.png);
+  background-size: 100%;
+  color: rgb(245, 245, 240);
+  font-size: 2rem;
+  text-align: center;
+}
 
-@media (min-width: 900px)  {
-    .grid-container{
+.bio {
+  grid-area: bio;
+  background-color: rgb(243, 237, 237);
+}
 
-        grid-template:
+.main {
+  grid-area: main;
+  background-image: url(imagenes/malla.png);
+  background-size: 100%;
+  color: white;
+}
 
-        "header header header" 100px
-        
-        "bio main sidebar"  auto
-        "footer  footer footer" 100px/
-        200px auto auto
-    }
-    .main{
-        background-color:rgb(200, 200, 200)}
-}  
-.icono{  width: 5vh; /* Ajusta el ancho a tu preferencia */
-    vertical-align: middle;
-    height: auto; /* Mantiene la proporción original de la imagen */
-    border: 2px solid #000; 
-    border-radius: 10px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra alrededor del logo */
-    object-fit: contain; /* Ajusta la imagen para que se contenga dentro del área especificada */
-    
-    margin: 10px auto; }
+.sidebar {
+  grid-area: sidebar;
+  background-color: beige;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: rgb(167, 188, 63);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 10px;
+  flex-wrap: wrap;
+  border-radius: 11px;
+}
+
+@media (min-width: 600px) {
+  .main {
+    background-image: url(imagenes/escritoriooscuro.png);
+    background-size: 100%;
+    opacity: 0.7;
+    color: white;
+  }
+
+  .grid-container {
+    grid-template:
+      "header header" 100px
+      "bio bio" auto
+      "sidebar main" auto
+      "footer footer" 100px /
+      200px auto;
+  }
+
+  .main {
+    background-color: rgb(240, 240, 240);
+  }
+}
+
+@media (min-width: 900px) {
+  .grid-container {
+    grid-template:
+      "header header header" 100px
+      "bio main sidebar" auto
+      "footer footer footer" 100px /
+      200px auto auto;
+  }
+
+  .main {
+    background-color: rgb(200, 200, 200);
+  }
+}
+
+.icono {
+  width: 5vh; 
+  vertical-align: middle;
+  height: auto; /* Mantiene la proporción original de la imagen */
+  border: 2px solid #000;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra alrededor del logo */
+  object-fit: contain; /* Ajusta la imagen para que se contenga dentro del área especificada */
+  margin: 10px auto;
+}
+.datos-p a,
+.datos-p a:visited{
+    color: rgba(196, 219, 212, 0.937); 
+    text-decoration: none; 
+    font-weight: bold;      
+}
+.datos-p a:hover{
+    color: rgba(136, 132, 88, 0.937); 
+    text-decoration: none; 
+    font-weight: bold;      
+}
+.datos-p a:active {
+    color: rgba(215, 202, 55, 0.937); 
+    text-decoration: none;
+    font-weight: bold;      
+}
+.header, .footer {
+  transition: background-color 0.4s ease;
+}

@@ -59,3 +59,8 @@ Cada pasatiempo tiene su propia carpeta de imágenes dentro de pasatiemposImagen
 Se incluye navegación con botones para avanzar o retroceder entre imágenes dentro de cada pasatiempo.
 
 se creo el "contactenos"
+***correcion de visibilidad de enlaces
+
+*** creacion popup
+
+*** animacion de trancision
